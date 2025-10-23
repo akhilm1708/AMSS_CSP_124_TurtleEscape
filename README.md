@@ -2,6 +2,7 @@
 
 
 Date: 2025-10-23
+Page: 1
 
 Goal
 - Build a spiral maze using turtle graphics. Start from the center and work outward.
@@ -35,3 +36,32 @@ Notes
 - Increasing step_length each iteration grows the spiral outward.
 - Change num_walls to make the spiral longer or shorter.
 - If needed, increase step_length only every 2 turns to form rectangular spiral spacing.
+
+
+
+Date: 2025-10-23
+Page: 2
+
+Goal
+- Add doors (openings) to spiral walls.
+
+Decisions
+- door_offset = 10
+- door_width = path_width
+
+Pseudocode (doors)
+1. for i in range(num_walls):
+   - wall_length ← step_length
+   - if wall_length > door_offset + door_width:
+       · forward(door_offset)
+       · penup(); forward(door_width); pendown()
+       · forward(wall_length - door_offset - door_width)
+     else:
+       · forward(wall_length)
+   - right(90)
+   - step_length ← step_length + path_width
+2. turtle.mainloop()
+```// filepath: c:\Users\2\Documents\GitHub\AMSS_CSP_124_TurtleEscape\README.md
+// ...existing code...
+
+
