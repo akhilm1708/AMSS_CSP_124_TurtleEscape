@@ -65,3 +65,12 @@ Pseudocode (doors)
 // ...existing code...
 
 
+
+Date: 2025-10-27
+Page: 3
+
+Goal:
+- Add doors (openings) to spiral walls.
+
+
+

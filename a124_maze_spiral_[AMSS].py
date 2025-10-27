@@ -12,3 +12,4 @@ maze_painter.forward(10)
 maze_painter.penup()
 maze_painter.forward(path_width*2)
 maze_painter.pendown()
+
