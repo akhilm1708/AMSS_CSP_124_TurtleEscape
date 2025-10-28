@@ -70,7 +70,7 @@ Date: 2025-10-27
 Page: 3
 
 Goal:
-- Add doors (openings) to spiral walls.
+- Add barriers (closed off pathways) to maze
 
 
 
