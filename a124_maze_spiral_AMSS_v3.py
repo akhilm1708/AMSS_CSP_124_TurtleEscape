@@ -31,9 +31,9 @@ count = 0
 
 
 for wall_count in range(num_walls):
-
   
-    if wall_length > door_offset + door_width:
+    if random.choice(draw_bool) and wall_length > door_offset + door_width:
+        
         maze_painter.forward(door_offset)
         maze_painter.penup()
         maze_painter.forward(door_width)

@@ -1,5 +1,6 @@
 
 import turtle
+import random
 
 num_walls = 28
 path_width = 20
@@ -25,10 +26,11 @@ maze_painter.pendown()
 wall_length = 40
 door_offset = 10
 door_width = path_width
+draw_bool = [True, False]
 
 
 for _ in range(num_walls):
-    if wall_length > door_offset + door_width:
+    if random.choice(draw_bool) and wall_length > door_offset + door_width:
         maze_painter.forward(door_offset)
         maze_painter.penup()
         maze_painter.forward(door_width)
