@@ -1,5 +1,6 @@
 # Akhil M and Sharvil S — Pseudocode: 1.2.4 Turtle Escape 
 
+## Computer Science Notebook
 
 Date: 2025-10-23
 Page: 1
@@ -39,6 +40,7 @@ Notes
 
 
 
+
 Date: 2025-10-23
 Page: 2
 
@@ -61,8 +63,7 @@ Pseudocode (doors)
    - right(90)
    - step_length ← step_length + path_width
 2. turtle.mainloop()
-```// filepath: c:\Users\2\Documents\GitHub\AMSS_CSP_124_TurtleEscape\README.md
-// ...existing code...
+
 
 
 
@@ -73,4 +74,67 @@ Goal:
 - Add barriers (closed off pathways) to maze
 
 
+Decisions
+- barrier_offset ← 40
+- barrier_length ← 2 × path_width
 
+Pseudocode (barriers)
+1. for each wall i:
+   - draw door (if any)
+   - if door drawn and space remains:
+       · forward(barrier_offset)
+       · right(90); forward(barrier_length); backward(barrier_length); left(90)
+   - finish remaining wall distance
+2. end for loop
+
+
+Date: 2025-10-27
+Page: 4
+
+Goal:
+- Fix the “too-long wall” problem.
+
+Decisions
+- outer_bound ← half of window size minus margin
+
+Pseudocode (short)
+1. for each wall i:
+   - current_offset ← i × path_width
+   - max_len ← outer_bound − current_offset
+   - wall_length ← min(step_length, max_len)
+   - if wall_length ≤ 0: break  // stop when no room remains
+   - only place door/barrier if wall_length > door_offset + door_width + barrier_offset
+   - draw wall using wall_length
+   - step_length ← step_length + path_width
+2. end for loop
+
+
+PLTW Qu
+
+Discussion 1:
+
+The code is extremely easy to interpret because the function names follow exactly to what they do. Like you can easily understand what print_me does, and the other functions. 
+Yes, all the calls to the function print_me follow the exact same logic because they all execute the identical two lines of code. 
+Yes, it function print_me implements implements abstraction across all the calls. It abstracts the process of displaying a two line formatted message. 
+
+
+
+
+
+
+
+
+
+## PLTW Questions
+
+Discussion 2
+1. Algorithms can be written in different ways and still accomplish the same task because you can execute them in different ways. You use different logics to achieve the same output, or you can use different functions. This can all lead you to the same task output. 
+2. Algorithms that appear similar can yield different results because they don’t actually have the same logic. Even though they are similar those different parts of the program will lead you to a completely different output. 
+
+
+
+
+
+
+
+ 

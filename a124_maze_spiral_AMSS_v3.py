@@ -6,10 +6,12 @@ num_walls = 16
 path_width = 20
 maze_color = "black"
 
+
 wn = turtle.Screen()
 wn.title("Spiral Maze with Doors")
 wn.tracer(0, 0)
 wn.delay(0)
+
 
 
 maze_painter = turtle.Turtle()
@@ -30,25 +32,35 @@ draw_bool = [True, False]
 count = 0
 
 
+def draw_door(door_position):
+    """Draw a door at the specified position"""
+    maze_painter.forward(door_position)
+    maze_painter.penup()
+    maze_painter.forward(door_width)
+    maze_painter.pendown()
+
+
+def draw_barrier(barrier_length):
+    """Draw a barrier perpendicular to the current direction"""
+    maze_painter.right(90)
+    maze_painter.forward(barrier_length)
+    maze_painter.backward(barrier_length)
+    maze_painter.left(90)
+
+
+
 for wall_count in range(num_walls):
   
     if random.choice(draw_bool) and wall_length > door_offset + door_width:
-        
-        maze_painter.forward(door_offset)
-        maze_painter.penup()
-        maze_painter.forward(door_width)
-        maze_painter.pendown()
-
+        draw_door(door_offset)
         maze_painter.forward(wall_length - door_offset - door_width)
     else:
         maze_painter.forward(wall_length)
 
     if wall_count > 4 and wall_count <= (num_walls - 4):
         if random.choice(draw_bool):
-            maze_painter.right(90)
-            maze_painter.forward(path_width * 2)
-            maze_painter.backward(path_width * 2)
-            maze_painter.left(90)
+            draw_barrier(path_width * 2)
+
 
     maze_painter.left(90)
     wall_length += path_width
