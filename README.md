@@ -109,7 +109,10 @@ Pseudocode (short)
 2. end for loop
 
 
-PLTW Qu
+
+
+
+## PLTW Questions
 
 Discussion 1:
 
@@ -119,17 +122,17 @@ Yes, it function print_me implements implements abstraction across all the calls
 
 
 
-
-
-
-
-
-
-## PLTW Questions
-
 Discussion 2
 1. Algorithms can be written in different ways and still accomplish the same task because you can execute them in different ways. You use different logics to achieve the same output, or you can use different functions. This can all lead you to the same task output. 
 2. Algorithms that appear similar can yield different results because they don’t actually have the same logic. Even though they are similar those different parts of the program will lead you to a completely different output. 
+
+
+
+Conclusion
+
+Pseudocode is extremely useful because it makes programming your actual program with a real language so much easier. Also, pseudo code is so much easier to actually understand and for you to read. It is also much easier to write pseudo code. 
+The algorithms translate the map coordinates to screen pixels which then selects the sprites based on object’s state or type. It achieves the programs intended purpose through the main rendering loop, which iterates over the visible tiles and calls the function to display the map. Draw barrier is called first to create the wall, then draw door is second. 
+
 
 
 
